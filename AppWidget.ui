@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>AppWidgetClass</class>
+ <widget class="QWidget" name="AppWidgetClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>511</width>
+    <height>321</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>VilleCheat</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout_3">
+   <item row="0" column="0">
+    <widget class="QGroupBox" name="groupBox_3">
+     <property name="title">
+      <string>Game Type</string>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_5">
+      <item>
+       <widget class="QRadioButton" name="gameNo">
+        <property name="text">
+         <string>idle</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QRadioButton" name="gameClick">
+        <property name="text">
+         <string>Farmville Autoclick</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer_3">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="onTop">
+        <property name="text">
+         <string>Always on top</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <widget class="QGroupBox" name="capBox">
+     <property name="title">
+      <string>Interesting Rectangle</string>
+     </property>
+     <property name="checkable">
+      <bool>false</bool>
+     </property>
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="0" column="0">
+       <widget class="QToolButton" name="pickRegionButton">
+        <property name="text">
+         <string>Pick</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLabel" name="xOffsetLabel">
+        <property name="text">
+         <string>L,T:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="2">
+       <widget class="QSpinBox" name="left">
+        <property name="suffix">
+         <string> px</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="3">
+       <widget class="QSpinBox" name="top">
+        <property name="suffix">
+         <string> px</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="4">
+       <widget class="QLabel" name="regionWidthLabel">
+        <property name="text">
+         <string>W,H:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="5">
+       <widget class="QSpinBox" name="width">
+        <property name="suffix">
+         <string> px</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="6">
+       <widget class="QSpinBox" name="height">
+        <property name="suffix">
+         <string> px</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="7">
+       <widget class="QLabel" name="yOffsetLabel_2">
+        <property name="text">
+         <string>Freq:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="8">
+       <widget class="QSpinBox" name="frequency">
+        <property name="maximumSize">
+         <size>
+          <width>71</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="suffix">
+         <string> Hz</string>
+        </property>
+        <property name="minimum">
+         <number>2</number>
+        </property>
+        <property name="maximum">
+         <number>40</number>
+        </property>
+        <property name="value">
+         <number>10</number>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="3" column="0">
+    <widget class="QLabel" name="capDisplay">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="0">
+    <widget class="QGroupBox" name="groupBox">
+     <property name="title">
+      <string>FarmVille</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_2">
+      <item row="0" column="0">
+       <widget class="QLabel" name="xOffsetLabel_2">
+        <property name="text">
+         <string>Selection Grid Size:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QSpinBox" name="fvCellsX">
+        <property name="suffix">
+         <string> cells</string>
+        </property>
+        <property name="minimum">
+         <number>1</number>
+        </property>
+        <property name="maximum">
+         <number>48</number>
+        </property>
+        <property name="value">
+         <number>12</number>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="2">
+       <widget class="QSpinBox" name="fvCellsY">
+        <property name="suffix">
+         <string> cells</string>
+        </property>
+        <property name="minimum">
+         <number>1</number>
+        </property>
+        <property name="maximum">
+         <number>48</number>
+        </property>
+        <property name="value">
+         <number>12</number>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="3">
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item row="0" column="4">
+       <widget class="QPushButton" name="goButton">
+        <property name="text">
+         <string>Go</string>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>
