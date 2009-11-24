@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>511</width>
-    <height>321</height>
+    <width>476</width>
+    <height>233</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -140,7 +140,7 @@
          <string> Hz</string>
         </property>
         <property name="minimum">
-         <number>2</number>
+         <number>1</number>
         </property>
         <property name="maximum">
          <number>40</number>
@@ -172,23 +172,7 @@
       <item row="0" column="0">
        <widget class="QLabel" name="xOffsetLabel_2">
         <property name="text">
-         <string>Selection Grid Size:</string>
-        </property>
-       </widget>
-      </item>
-      <item row="0" column="1">
-       <widget class="QSpinBox" name="fvCellsX">
-        <property name="suffix">
-         <string> cells</string>
-        </property>
-        <property name="minimum">
-         <number>1</number>
-        </property>
-        <property name="maximum">
-         <number>48</number>
-        </property>
-        <property name="value">
-         <number>12</number>
+         <string>Grid:</string>
         </property>
        </widget>
       </item>
@@ -208,7 +192,7 @@
         </property>
        </widget>
       </item>
-      <item row="0" column="3">
+      <item row="0" column="4">
        <spacer name="horizontalSpacer">
         <property name="orientation">
          <enum>Qt::Horizontal</enum>
@@ -221,8 +205,41 @@
         </property>
        </spacer>
       </item>
-      <item row="0" column="4">
-       <widget class="QPushButton" name="goButton">
+      <item row="0" column="3">
+       <widget class="QSpinBox" name="fvCellsX">
+        <property name="suffix">
+         <string> cells</string>
+        </property>
+        <property name="minimum">
+         <number>1</number>
+        </property>
+        <property name="maximum">
+         <number>48</number>
+        </property>
+        <property name="value">
+         <number>12</number>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="8">
+       <widget class="QCheckBox" name="saferBox">
+        <property name="text">
+         <string>safer</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="6">
+       <widget class="QToolButton" name="tryButton">
+        <property name="text">
+         <string>Try</string>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="7">
+       <widget class="QToolButton" name="goButton">
         <property name="text">
          <string>Go</string>
         </property>

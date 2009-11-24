@@ -108,6 +108,9 @@ AppWidget::AppWidget(QWidget *parent)
         ui->height->setValue( m_settings->value( "rect/height" ).toInt() );
         ui->frequency->setValue( m_settings->value( "rect/frequency" ).toInt() );
         ui->onTop->setChecked( m_settings->value( "rect/ontop" ).toBool() );
+        ui->fvCellsX->setValue( m_settings->value( "cells/x" ).toInt() );
+        ui->fvCellsY->setValue( m_settings->value( "cells/y" ).toInt() );
+        ui->saferBox->setChecked( m_settings->value( "cells/safer" ).toBool() );
     }
     connect( ui->left, SIGNAL(valueChanged(int)), this, SLOT(slotCapParamsChanged()) );
     connect( ui->top, SIGNAL(valueChanged(int)), this, SLOT(slotCapParamsChanged()) );
@@ -174,6 +177,9 @@ void AppWidget::saveSettings()
     m_settings->setValue( "rect/height", ui->height->value() );
     m_settings->setValue( "rect/frequency", ui->frequency->value() );
     m_settings->setValue( "rect/ontop", ui->onTop->isChecked() );
+    m_settings->setValue( "cells/x", ui->fvCellsX->value() );
+    m_settings->setValue( "cells/y", ui->fvCellsY->value() );
+    m_settings->setValue( "cells/safer", ui->saferBox->isChecked() );
 }
 
 void AppWidget::on_gameNo_toggled(bool checked)

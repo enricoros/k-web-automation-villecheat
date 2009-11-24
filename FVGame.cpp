@@ -87,8 +87,12 @@ QPixmap FVGame::highlightPixmap( const QPixmap & pixmap ) const
 
 void FVGame::run( Ui::AppWidgetClass * ui, const ScreenCapture * capture )
 {
-    if (!ui->goButton->isChecked())
+    if (!ui->goButton->isChecked() && !ui->tryButton->isChecked())
         return;
+
+    // random noise
+    if (ui->saferBox->isChecked())
+        InputUtils::mouseMove(QCursor::pos() + QPoint(-10 + (qrand() % 20), -10 + (qrand() % 20)));
 
     // proceed every T
     if ( m_time.isNull() )
@@ -106,9 +110,12 @@ void FVGame::run( Ui::AppWidgetClass * ui, const ScreenCapture * capture )
     // click on that point
     QPoint point = m_nextPoints.takeFirst();
     InputUtils::mouseMove(point);
-    InputUtils::mouseLeftClick();
-    if (m_nextPoints.isEmpty())
+    if (ui->goButton->isChecked())
+        InputUtils::mouseLeftClick();
+    if (m_nextPoints.isEmpty()) {
         ui->goButton->setChecked(false);
+        ui->tryButton->setChecked(false);
+    }
 }
 
 QList<QPoint> FVGame::points(const QRect & rect) const
